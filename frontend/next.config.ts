@@ -1,8 +1,11 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  output: 'export',
   reactStrictMode: true,
-  allowedDevOrigins: ['10.6.140.215'],
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
