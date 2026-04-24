@@ -61,7 +61,7 @@ export default function CanvasEditor({ imageUrl, previewWidth, previewHeight, on
     if (img.complete) resize();
 
     function getPoint(e: PointerEvent) {
-      const rect = canvas.getBoundingClientRect();
+      const rect = canvas!.getBoundingClientRect();
       const x = Math.min(Math.max(e.clientX - rect.left, 0), rect.width);
       const y = Math.min(Math.max(e.clientY - rect.top, 0), rect.height);
       const normalized: [number, number] = [x / rect.width, y / rect.height];
@@ -69,7 +69,7 @@ export default function CanvasEditor({ imageUrl, previewWidth, previewHeight, on
     }
 
     function drawStroke(stroke: Stroke) {
-      const rect = canvas.getBoundingClientRect();
+      const rect = canvas!.getBoundingClientRect();
       if (!rect.width || !rect.height) return;
       ctx.strokeStyle = 'rgba(255, 40, 40, 0.62)';
       ctx.fillStyle = 'rgba(255, 40, 40, 0.62)';
@@ -93,7 +93,7 @@ export default function CanvasEditor({ imageUrl, previewWidth, previewHeight, on
     }
 
     function redraw() {
-      const rect = canvas.getBoundingClientRect();
+      const rect = canvas!.getBoundingClientRect();
       ctx.clearRect(0, 0, rect.width, rect.height);
       for (const stroke of strokesRef.current) drawStroke(stroke);
       if (currentRef.current) drawStroke(currentRef.current);
