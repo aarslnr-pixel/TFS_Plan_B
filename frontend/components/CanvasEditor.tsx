@@ -41,7 +41,7 @@ export default function CanvasEditor({ imageUrl, previewWidth, previewHeight, on
     const img = imgRef.current;
     if (!canvas || !img) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d')!;
     if (!ctx) return;
 
     const resize = () => {
