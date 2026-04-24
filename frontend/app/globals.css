@@ -1,0 +1,132 @@
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+button, input, select {
+  font: inherit;
+}
+main {
+  min-height: 100vh;
+}
+.page {
+  width: min(1100px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+.hero {
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 8px;
+}
+.hero p {
+  margin: 0;
+  color: #94a3b8;
+}
+.card {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 12px 48px rgba(0,0,0,.25);
+}
+.stack { display: grid; gap: 16px; }
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.btn {
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+.btn.success {
+  background: #15803d;
+  border-color: #15803d;
+}
+.label {
+  font-size: .95rem;
+  color: #cbd5e1;
+}
+.small {
+  font-size: .875rem;
+  color: #94a3b8;
+}
+.input-file {
+  display: block;
+  width: 100%;
+  border: 1px dashed #475569;
+  border-radius: 16px;
+  padding: 16px;
+  background: #0b1220;
+}
+.canvas-shell {
+  width: 100%;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #020617;
+}
+.canvas-frame {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  touch-action: none;
+}
+.canvas-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.canvas-frame canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.preview-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid #334155;
+  display: block;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: white;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+hr.sep {
+  border: none;
+  border-top: 1px solid #334155;
+  margin: 4px 0;
+}

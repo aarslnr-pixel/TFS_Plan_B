@@ -1,0 +1,94 @@
+Klasöre gir
+
+Önce zipten çıkan ana klasöre gel.
+
+Örnek:
+
+cd C:\Users\alptug.arslaner\Desktop\object_eraser_starter
+
+İçinde şu iki klasör olmalı:
+
+backend
+frontend
+1) Backend’i kur ve çalıştır
+
+Yeni bir cmd aç.
+
+1.1 backend klasörüne gir
+cd C:\Users\alptug.arslaner\Desktop\object_eraser_starter\backend
+1.2 sanal ortam oluştur
+python -m venv .venv
+
+Olmazsa bunu dene:
+
+py -m venv .venv
+1.3 sanal ortamı aç
+.venv\Scripts\activate
+
+Başına (.venv) gelirse tamamdır.
+
+1.4 paketleri kur
+pip install -r requirements.txt
+1.5 .env dosyasını oluştur
+copy .env.example .env
+1.6 backend’i başlat
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Burada hata verirse şu alternatif:
+
+python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Backend düzgün açılırsa şunu görürsün:
+
+Uvicorn running on http://0.0.0.0:8000
+
+Tarayıcıdan kontrol:
+
+http://localhost:8000/docs
+
+Bu sayfa açılıyorsa backend tamam.
+
+2) Frontend’i kur ve çalıştır
+
+Backend açık kalsın.
+Şimdi ikinci bir cmd aç.
+
+2.1 frontend klasörüne gir
+cd C:\Users\alptug.arslaner\Desktop\object_eraser_starter\frontend
+2.2 .env.local oluştur
+copy .env.local.example .env.local
+2.3 Node kurulu mu kontrol et
+node -v
+npm -v
+
+Sürüm dönüyorsa devam et.
+node is not recognized gibi hata gelirse Node.js kurulu değildir; önce onu kurman gerekir.
+
+2.4 paketleri kur
+npm install
+2.5 frontend’i başlat
+npm run dev
+
+Düzgün açılırsa şuna benzer bir çıktı görürsün:
+
+Local: http://localhost:3000
+3) Uygulamayı aç
+
+Tarayıcıda şuraya gir:
+
+http://localhost:3000
+
+http://localhost:3000
+-----------------------------------
+C:\Users\alptug.arslaner>cd C:\Users\alptug.arslaner\Desktop\social_media_TFS_Plan_B\Chatgpt_Deneme\object_eraser_starter\backend
+
+C:\Users\alptug.arslaner\Desktop\social_media_TFS_Plan_B\Chatgpt_Deneme\object_eraser_starter\backend>.venv\Scripts\activate
+
+(.venv) C:\Users\alptug.arslaner\Desktop\social_media_TFS_Plan_B\Chatgpt_Deneme\object_eraser_starter\backend>python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+←[32mINFO←[0m:     Will watch for changes in these directories: ['C:\\Users\\alptug.arslaner\\Desktop\\social_media_TFS_Plan_B\\Chatgpt_Deneme\\object_eraser_starter\\backend']
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://0.0.0.0:8000←[0m (Press CTRL+C to quit)
+←[32mINFO←[0m:     Started reloader process [←[36m←[1m32004←[0m] using ←[36m←[1mWatchFiles←[0m
+←[32mINFO←[0m:     Started server process [←[36m27880←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+←[32mINFO←[0m:     Application startup complete.
+------------------------------------

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment files (local config, IP adresleri)
+.env
+.env.local
+frontend/.env.local
+
+# Backend storage & logs (session dosyaları, geçici)
+backend/storage/
+backend/logs/
+
+# Node.js
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Test outputs
+test_assets/output/
